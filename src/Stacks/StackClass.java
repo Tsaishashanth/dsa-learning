@@ -2,9 +2,16 @@ package Stacks;
 
 import java.util.Stack;
 
+//we use stack when we need to store like data
+//we use stack and queues in trees and bfs, dfs
+//we use this when we need to convert recursion program into iteration
+
+
 public class StackClass {
 
     //stack follows -> LIFO
+
+    //Basically stack is a class
 
     //timecomplexity
           //inserting an item takes constant time
