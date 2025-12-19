@@ -1,6 +1,33 @@
 package LinkedList;
 
 public class SinglyLinkedList {
+
+    public static void display(Node head) {   //here node is a classname and head is variable it is usefull or printingthe linked list
+//        System.out.println(head.data);
+//        System.out.println(head.next.data);              //we can use these but to print all the linkedlist it is impossible so we use do while loop
+
+        //while loop
+        Node temp = head;                       //doubt -> why we need to use temp node here
+        while(temp != null) {
+            System.out.print(temp.data+ "->");
+            temp = temp.next;
+        }
+        System.out.println("linked list is finished");
+
+        //forloop
+
+//        for(Node temp = head; temp != null; temp = temp.next) {
+//            System.out.println(temp.data);
+//        }
+
+    }
+    public static void displayrec (Node head) {
+        //recursion                                             doubt -> recurssion will print from last to first
+        if(head == null) return;
+        System.out.println(head.data + " ");
+        displayrec(head.next);
+    }
+
     public static void main(String[] args) {
         //so here we just assgined value to the variables but they are in random
         Node a = new Node(10); //a.data = 10;
@@ -19,5 +46,7 @@ public class SinglyLinkedList {
         System.out.println(b);
         System.out.println(a.next); // here it gives one adress for a , and the adress for b and a.next will be the same
         System.out.println(a.next.next);  // this syntax is also there
+
+        display(b); //here which ever parameter we pass to the method that becomes the head;
     }
 }
