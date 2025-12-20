@@ -68,6 +68,22 @@ public class SinglyLinkedList {
         size--;
     }
 
+    //inserting at perticular index
+    //first we will check whether that value is present in linked list or not
+    int  exist (int data) {
+        if (head == null) return -1;
+        int idx = 0;
+
+        Node temp = head;
+        while(temp != null ) {
+            if(temp.data == data) return true;
+            temp = temp.next;
+            idx++;
+        }
+        return -1;
+    }
+
+
 
 
     public static void main(String[] args) {
